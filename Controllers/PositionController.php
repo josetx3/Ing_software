@@ -21,11 +21,16 @@ class PositionController
         $PositionModel = new PositionModel($Connection);
         $PositionView = new PositionView();
 
-        $emti_name = strtoupper ($_POST['emti_name']);
-        $emti_description = strtoupper ($_POST['emti_description']);
+        $emti_name = strtoupper($_POST['emti_name']);
+        $emti_description = strtoupper($_POST['emti_description']);
 
-        if (empty($emti_name) or empty($emti_description)) {
-            $response = ["message" => 'FALTAN CAMPOS POR LLENAR'];
+        if (empty($emti_name)) {
+            $response = ["message" => 'FALTA EL NOMBRE DEL CARGO'];
+            exit(json_encode($response));
+        }
+
+        if (empty($emti_description)) {
+            $response = ["message" => 'FALTA LA DESCRIPCION DEL CARGO'];
             exit(json_encode($response));
         }
 
@@ -48,14 +53,14 @@ class PositionController
         $PositionView = new PositionView();
 
         $emti_id = $_POST['id'];
-        $emti_name = strtoupper ($_POST['emti_name']);
-        $emti_name_1 = strtoupper ($_POST['emti_name_1']);
-        $emti_description = strtoupper ($_POST['emti_description']);
+        $emti_name = strtoupper($_POST['emti_name']);
+        $emti_name_1 = strtoupper($_POST['emti_name_1']);
+        $emti_description = strtoupper($_POST['emti_description']);
 
 
-        if($emti_name != $emti_name_1){
+        if ($emti_name != $emti_name_1) {
             $array_positions = $PositionModel->consultEmtiName($emti_name);
-            if((($array_positions))){
+            if ((($array_positions))) {
                 $response = ["message" => 'YA ESTA REGISTRADO ESTE CARGO'];
                 exit(json_encode($response));
             }
@@ -86,19 +91,18 @@ class PositionController
 
 
         $search_position = strtoupper($_POST['consult_position']);
-        
-        if(empty($search_position)){
-            $response = ["message"=>'SELECIONE UN FILRO DE BUSQUEDA O INGRESE UNA PALABRA CLAVE PARA BUSCAR'];
+
+        if (empty($search_position)) {
+            $response = ["message" => 'SELECIONE UN FILRO DE BUSQUEDA O INGRESE UNA PALABRA CLAVE PARA BUSCAR'];
             exit(json_encode($response));
         }
 
         $arreglo_search_position = $PositionModel->consultposition($search_position);
 
-        if(!$arreglo_search_position){
-            $response = ["message"=>'EL USUARIO SOLICITADO NO SE ENCUENTRA REGISTRADO O SELECCIONE OTRO FILTRO'];
+        if (!$arreglo_search_position) {
+            $response = ["message" => 'EL USUARIO SOLICITADO NO SE ENCUENTRA REGISTRADO O SELECCIONE OTRO FILTRO'];
             exit(json_encode($response));
         }
         $PositionView->paginatePosition($arreglo_search_position);
     }
-
 }
