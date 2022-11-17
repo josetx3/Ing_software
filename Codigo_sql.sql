@@ -64,10 +64,7 @@ VALUES ('1004945023', 'JOSE', 'LEONARDO', 'QUINTERO', 'LEON', 'CRA 16 # 6A - 63'
 		('1193223062', 'JHON', 'DEIVY', 'RIVAS', 'OJEDA', 'CALLE 7 # 40-58', 'M', '3167863081', 
 		'rivas@gmail.com', 'rivas123', 'EA' ,3);
 		('1004892245', 'FERNANDO', 'JAVIER', 'ARENAZ', '', 'CALLE 2 # 54-21', 'M', '3145272741', 
-		'fernando@gmail.com', 'fernando123','EA',4),
-
-
-		;
+		'fernando@gmail.com', 'fernando123','EA',4);
 
 
 --Tabla Auditoria_Usuario
