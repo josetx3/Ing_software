@@ -40,8 +40,43 @@ class PersonController
         $emti_id = strtolower($_POST['emti_id']);
         $acce_state = strtoupper($_POST['acce_state']);
 
-        if (empty($document) or empty($name1) or empty($lastname1) or empty($address) or empty($sex) or empty($telephone) or empty($email) or empty($pasword) or empty($pasword1) or empty($emti_id) or empty($acce_state)) {
-            $response = ["message" => 'FALTAN CAMPOS POR LLENAR'];
+        if (empty($document)) {
+            $response = ["message" => 'FALTA POR LLENAR EL DOCUMENTO'];
+            exit(json_encode($response));
+        }
+
+        if (empty($name1)) {
+            $response = ["message" => 'FALTA POR LLENAR EL NOMBRE 1'];
+            exit(json_encode($response));
+        }
+
+        if (empty($lastname1)) {
+            $response = ["message" => 'FALTA POR LLENAR EL APELLIDO 1'];
+            exit(json_encode($response));
+        }
+
+        if (empty($address)) {
+            $response = ["message" => 'FALTA POR LLENAR LA DIRECCION'];
+            exit(json_encode($response));
+        }
+
+        if (empty($telephone)) {
+            $response = ["message" => 'FALTA POR LLENAR EL TELEFONO'];
+            exit(json_encode($response));
+        }
+
+        if (empty($email)) {
+            $response = ["message" => 'FALTA POR LLENAR EL EMAIL'];
+            exit(json_encode($response));
+        }
+
+        if (empty($pasword)) {
+            $response = ["message" => 'FALTA POR LLENAR LA CONTRASEÑA'];
+            exit(json_encode($response));
+        }
+
+        if (empty($acce_state)) {
+            $response = ["message" => 'FALTA POR LLENAR EL ESTADO'];
             exit(json_encode($response));
         }
 

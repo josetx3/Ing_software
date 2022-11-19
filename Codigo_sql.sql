@@ -19,7 +19,7 @@ VALUES (default, 'GERENTE', 'ENCARGADO DEL NEGOCIO');
 INSERT INTO public.employees_title(emti_id, emti_name, emti_description)
 VALUES (default, 'BODEGUERO', 'ENCARGADO DE LA PARTE DEL INVENTARIO');
 INSERT INTO public.employees_title(emti_id, emti_name, emti_description)
-VALUES (default, 'VENDEDOR', 'NO HACE NADA');
+VALUES (default, 'VENDEDOR', 'NO HACE NADA');
 
 
 
@@ -60,9 +60,9 @@ acce_state, emti_id)
 VALUES ('1004945023', 'JOSE', 'LEONARDO', 'QUINTERO', 'LEON', 'CRA 16 # 6A - 63', 'M', '3183843124', 
 		'jose@gmail.com', 'jose123','EA' ,1),
 		('1193223063', 'ANDRES', 'FELIPE', 'GUAGLIANONI', '', 'CALLE 1 # 4-32', 'M', '3167863081', 
-		'EXEMPLEADO@UFPSO.EDU.CO', 'ADMIN123','EA',2),
+		'felipe@gmail.com', 'ADMIN123','EA',2),
 		('1193223062', 'JHON', 'DEIVY', 'RIVAS', 'OJEDA', 'CALLE 7 # 40-58', 'M', '3167863081', 
-		'rivas@gmail.com', 'rivas123', 'EA' ,3);
+		'rivas@gmail.com', 'rivas123', 'EA' ,3),
 		('1004892245', 'FERNANDO', 'JAVIER', 'ARENAZ', '', 'CALLE 2 # 54-21', 'M', '3145272741', 
 		'fernando@gmail.com', 'fernando123','EA',4);
 
@@ -133,7 +133,15 @@ select * from public.produc;
 
 INSERT INTO public.produc (Prod_reference, prod_code_plu, prod_description,
 prod_available_quantity, prod_arrival_price, prod_selling_price, prod_iva)
-VALUES ('2452','A11','POPETAS DE CARAMELO',7,2500,3000,1.19);
+VALUES 	('2452','P01','POPETAS CARAMELO',7,2500,3000,1.19),
+		('2453','PO2','POPETAS MANTEQUILLA',10,2500,3500,1.19),
+		('2454','PO3','POPETAS BBQ',10,2500,3500,1.19),
+		('2455','PO4','POPETAS MIXTAS',10,2500,3500,1.19),
+		('2456','PO5','POPETAS BBQ FAMILIAR',10,3500,4500,1.19),
+		('2457','PO6','POPETAS CARAMELO FAMILIAR',10,3500,4500,1.19),
+		('2458','PO7','POPETAS MIXTAS FAMILIAR',10,3500,4500,1.19),
+		('2459','PO8','POPETAS MANTEQUILLA FAMILIAR',10,3500,4500,1.19)
+	;
 
 --Tabla audi_Producto
 CREATE TABLE public.audi_produc(
@@ -195,5 +203,8 @@ CREATE TABLE public.cliente(
 );
 
 INSERT INTO public.cliente(cliente_documento,cliente_nombre,cliente_correo,cliente_sexo,cliente_telefono,cliente_direccion,cliente_barrio,cliente_nombre_negocio,cliente_nit_negocio,cliente_estado) 
-					VALUES('165','JUAN SEBASTIAN ANGARITA','jsangarita@gmail.com','M','314758808','cra 16 # 6a - 63','el llano','Tienda la estrella','128756','EA');
+					VALUES	('165','JUAN SEBASTIAN ANGARITA','jsangarita@gmail.com','M','314758808','cra 16 # 6a - 63','el llano','Tienda la estrella','128756','EA'),
+							('1004563451','DIEGO ARMANDO','diegoarmando@gmail.com','M','3124576123','cra 13 # 4A-54','el landia','Tienda la pepita','5426234','EA'),
+							('1004899200','DIANY ISABEL GARCIA','dgarciac@gmail.com','F','31678921450','kda 32 $ 65 - 5B','el dorado','Tienda la esquina','2365234','EA')
+							;
 
