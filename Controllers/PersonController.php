@@ -16,6 +16,7 @@ class PersonController
         $array_positions = $PositionModel->listPosition();
         $PersonView->paginatePerson($array_persons, $array_positions);
     }
+    
     function insertPerson()
     {
         require_once "Models/PositionModel.php";
