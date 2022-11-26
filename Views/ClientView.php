@@ -16,7 +16,7 @@ class ClientView
 
                         <div class="form-group col-md-6">
                             <label for="">Documento</label>
-                            <input type="text" class="form-control" name="cliente_documento" id="cliente_documento" required>
+                            <input type="number" class="form-control" name="cliente_documento" id="cliente_documento" onkeypress="return solonumeros(event)"  required>
                         </div>
 
                         <div class="form-group col-md-6">
@@ -41,7 +41,7 @@ class ClientView
 
                         <div class="form-group col-md-6">
                             <label for="">Telefono</label>
-                            <input type="text" class="form-control" name="cliente_telefono" id="cliente_telefono" required>
+                            <input type="number" class="form-control" name="cliente_telefono" id="cliente_telefono" onkeypress="return solonumeros(event)" required>
                         </div>
 
                         <div class="form-group col-md-6">
@@ -61,7 +61,7 @@ class ClientView
 
                         <div class="form-group col-md-6">
                             <label for="">Nit negocio</label>
-                            <input type="text" class="form-control" name="cliente_nit_negocio" id="cliente_nit_negocio" required>
+                            <input type="number" class="form-control" name="cliente_nit_negocio" id="cliente_nit_negocio" onkeypress="return solonumeros(event)" required>
                         </div>
 
                         <div class="form-group col-md-6">
@@ -190,7 +190,7 @@ class ClientView
 
                         <div class="form-group col-md-6">
                             <label for="">Documento</label>
-                            <input type="text" class="form-control" name="cliente_documento" id="cliente_documento" value="<?= $cliente_documento ?>" required>
+                            <input type="number" class="form-control" name="cliente_documento" id="cliente_documento" value="<?= $cliente_documento ?>" onkeypress="return valideKey(event)" required>
                             <input type="hidden" class="form-control" name="cliente_documento1" id="cliente_documento1" value="<?= $cliente_documento ?>" required>
                         </div>
 
