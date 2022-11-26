@@ -64,8 +64,7 @@ class ClientModel
     function updateClient($cliente_documento, $cliente_nombre, $cliente_correo, $cliente_sexo, $cliente_telefono, $cliente_direccion, $cliente_barrio, $cliente_nombre_negocio, $cliente_nit_negocio, $cliente_estado)
     {
         $sql = "UPDATE cliente SET
-     cliente_documento = '$cliente_documento',
-     ciente_nombre = '$cliente_nombre',
+     cliente_nombre = '$cliente_nombre',
      cliente_correo = '$cliente_correo',
      cliente_sexo = '$cliente_sexo',
      cliente_telefono = '$cliente_telefono',
@@ -74,6 +73,7 @@ class ClientModel
      cliente_nombre_negocio = '$cliente_nombre_negocio',
      cliente_nit_negocio = '$cliente_nit_negocio',
      cliente_estado = '$cliente_estado'
+     WHERE cliente_documento = '$cliente_documento'
      ";
         $this->Connection->query($sql);
     }
