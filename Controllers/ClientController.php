@@ -316,7 +316,7 @@ class ClientController
         }
 
 
-        $array_clients = $ClientModel->updateClient($cliente_documento, $cliente_nombre, $cliente_correo, $cliente_sexo, $cliente_telefono, $cliente_direccion, $cliente_barrio, $cliente_nombre_negocio, $cliente_nit_negocio, $cliente_estado);
+        $array_clients = $ClientModel->updateClient($cliente_documento,$cliente_documento1, $cliente_nombre, $cliente_correo, $cliente_sexo, $cliente_telefono, $cliente_direccion, $cliente_barrio, $cliente_nombre_negocio, $cliente_nit_negocio, $cliente_estado);
         $array_clients = $ClientModel->listClient();
         $ClientView->paginateClient($array_clients);
     }

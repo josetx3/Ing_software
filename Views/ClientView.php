@@ -190,7 +190,7 @@ class ClientView
 
                         <div class="form-group col-md-6">
                             <label for="">Documento</label>
-                            <input type="number" class="form-control" name="cliente_documento" id="cliente_documento" value="<?= $cliente_documento ?>" onkeypress="return valideKey(event)" required>
+                            <input type="number" class="form-control" name="cliente_documento" id="cliente_documento" value="<?= $cliente_documento ?>" onkeypress="return solonumeros(event)" required>
                             <input type="hidden" class="form-control" name="cliente_documento1" id="cliente_documento1" value="<?= $cliente_documento ?>" required>
                         </div>
 
