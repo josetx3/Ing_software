@@ -124,7 +124,12 @@ class ClientController
             exit(json_encode($response));
         }
 
-        if($cliente_nit_negocio < 0){
+        if ($cliente_nit_negocio < 0) {
+            $response = ["message" => 'NO SE PUEDEN INGRESAR VALORES NEGATIVOS'];
+            exit(json_encode($response));
+        }
+
+        if ($cliente_telefono < 0) {
             $response = ["message" => 'NO SE PUEDEN INGRESAR VALORES NEGATIVOS'];
             exit(json_encode($response));
         }
@@ -307,7 +312,7 @@ class ClientController
             if ($array_clients) {
                 $response = ["message" => 'NIT YA REGISTRADO'];
                 exit(json_encode($response));
-            } 
+            }
         }
 
 

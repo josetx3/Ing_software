@@ -112,12 +112,12 @@ class ClientModel
 
     function consultClient($search_client)
     {
-        $sql = "SELECT * FROM cliente WHERE cliente_documento ='$search_client' OR
-                                            cliente_nombre='$search_client' OR
-                                            cliente_correo = '$search_client' OR
-                                            cliente_telefono = '$search_client' OR
-                                            cliente_nombre_negocio = '$search_client' OR
-                                            cliente_nit_negocio = '$search_client'
+        $sql = "SELECT * FROM cliente WHERE cliente_documento LIKE'%$search_client%' OR
+                                            cliente_nombre LIKE '%$search_client%' OR
+                                            cliente_correo LIKE '%$search_client%' OR
+                                            cliente_telefono LIKE '%$search_client%' OR
+                                            cliente_nombre_negocio LIKE '%$search_client%' OR
+                                            cliente_nit_negocio LIKE '%$search_client%'
                                             ";
         $this->Connection->query($sql);
         return $this->Connection->fetchAll();
