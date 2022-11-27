@@ -196,8 +196,6 @@ function sololetras(e) {
         return false;
     }
 
-    console.log("HOLAAA");
-
 }
 
 function solonumeros(evt) {

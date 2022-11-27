@@ -124,6 +124,11 @@ class ClientController
             exit(json_encode($response));
         }
 
+        if($cliente_nit_negocio < 0){
+            $response = ["message" => 'NO SE PUEDEN INGRESAR VALORES NEGATIVOS'];
+            exit(json_encode($response));
+        }
+
         if (!(filter_var($cliente_correo, FILTER_VALIDATE_EMAIL))) {
             $response = ["message" => 'EMAIL INVALIDO '];
             exit(json_encode($response));

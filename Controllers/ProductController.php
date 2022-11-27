@@ -29,7 +29,11 @@ class ProductController
         $prod_iva  = floatval(strval($_POST['prod_iva']));
 
         if ($prod_available_quantity <= 0) {
-            $response = ["message" => 'NO SE PUEDEN INGRESAR UNCA CANTIDAD IGUAL A 0'];
+            $response = ["message" => 'NO SE PUEDEN INGRESAR UN VALOR NEGATIVO O IGUAL A 0'];
+            exit(json_encode($response));
+        }
+        if($prod_iva < 0){
+            $response = ["message" => 'NO SE ACEPTAN VALORES NEGATIVOS'];
             exit(json_encode($response));
         }
 
@@ -150,6 +154,11 @@ class ProductController
         $array_products = $ProductModel->validateUpdateProduct($prod_code_plu, $prod_reference);
         if (!$array_products) {
             $response = ["message" => 'SE ALTERO EL CODIGO DEL PRODUCTO'];
+            exit(json_encode($response));
+        }
+
+        if($prod_iva < 0){
+            $response = ["message" => 'NO SE PUEDEN INGRESAR VALORES NEGATIVOS'];
             exit(json_encode($response));
         }
 
