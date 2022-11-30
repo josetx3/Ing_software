@@ -83,8 +83,8 @@ class ClientController
             exit(json_encode($response));
         }
 
-        if (strlen($cliente_documento) > 80) {
-            $response = ["message" => 'NO SE PUEDEN INGRESAR MAS DE 80 CARACTERES EN EL NOMBRE'];
+        if (strlen($cliente_documento) > 20) {
+            $response = ["message" => 'NO SE PUEDEN INGRESAR MAS DE 20 CARACTERES EN DOCUMENTO'];
             exit(json_encode($response));
         }
 
@@ -124,13 +124,19 @@ class ClientController
             exit(json_encode($response));
         }
 
+        if ($cliente_documento < 0) {
+            $response = ["message" => 'NO SE PUEDEN INGRESAR VALORES NEGATIVOS EN EL DOCUMENTO'];
+            exit(json_encode($response));
+        }
+
+
         if ($cliente_nit_negocio < 0) {
-            $response = ["message" => 'NO SE PUEDEN INGRESAR VALORES NEGATIVOS'];
+            $response = ["message" => 'NO SE PUEDEN INGRESAR VALORES NEGATIVOS EN EL NIT DEL NEGOCIO'];
             exit(json_encode($response));
         }
 
         if ($cliente_telefono < 0) {
-            $response = ["message" => 'NO SE PUEDEN INGRESAR VALORES NEGATIVOS'];
+            $response = ["message" => 'NO SE PUEDEN INGRESAR VALORES NEGATIVOS EN EL TELEFONO'];
             exit(json_encode($response));
         }
 
