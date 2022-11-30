@@ -61,32 +61,32 @@ class InvoiceView
                     <div class="row md-12">
 
                         <div class="form-group col-md-2">
-                            <label for="">Codigo PLU:</label>
+                            <label for="">Codigo PLU</label>
                             <input type="text" class="form-control" name="" id="" required>
                         </div>
 
                         <div class="form-group col-md-5">
-                            <label for="">Descripcion:</label>
+                            <label for="">Descripcion</label>
                             <input type="text" class="form-control" name="" id="">
                         </div>
 
                         <div class="form-group col-md-1">
-                            <label for="">Cantidad:</label>
+                            <label for="">Cantidad</label>
                             <input type="number" class="form-control" name="" id="" placeholder="" required>
                         </div>
 
                         <div class="form-group col-md-1">
-                            <label for="">IMPUESTOS:</label>
+                            <label for="">IMPUESTOS</label>
                             <input type="number" class="form-control" name="" id="" required>
                         </div>
 
                         <div class="form-group col-md-1">
-                            <label for="">VALOR UNITARIO:</label>
+                            <label for="">VALOR UNI</label>
                             <input type="number" class="form-control" name="" id="" required>
                         </div>
 
                         <div class="form-group col-md-1">
-                            <label for="">VALOR TOTAL:</label>
+                            <label for="">VALOR TOTAL</label>
                             <input type="number" class="form-control" name="" id="" required>
                         </div>
 

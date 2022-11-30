@@ -17,7 +17,7 @@ class PersonView
 
                         <div class="form-group col-md-6">
                             <label for="">Documento:</label>
-                            <input type="number" class="form-control" name="document" id="document" required>
+                            <input type="number" class="form-control" name="document" id="document" onkeypress="return solonumeros(event);" required>
                         </div>
 
                         <div class="form-group col-md-6">
@@ -57,7 +57,7 @@ class PersonView
 
                         <div class="form-group col-md-6">
                             <label for="">Celular:</label>
-                            <input type="number" class="form-control" name="telephone" id="telephone" required>
+                            <input type="number" class="form-control" name="telephone" id="telephone" onkeypress="return solonumeros(event);" required>
                         </div>
 
                         <div class="form-group col-md-6">
@@ -241,7 +241,7 @@ class PersonView
 
                         <div class="form-group col-md-6">
                             <label for="">Documento:</label>
-                            <input type="text" class="form-control" name="u_document" id="u_document" value="<?= $document ?> " readOnly>
+                            <input type="text" class="form-control" name="u_document" id="u_document" value="<?= $document ?> " onkeypress="return solonumeros(event);" readOnly>
                         </div>
 
                         <div class="form-group col-md-6">
@@ -271,7 +271,7 @@ class PersonView
 
                         <div class="form-group col-md-6">
                             <label for="">Celular:</label>
-                            <input type="text" class="form-control" name="u_telephone" id="telephone" value="<?= $telephone_number ?>">
+                            <input type="text" class="form-control" name="u_telephone" id="telephone" value="<?= $telephone_number ?> onkeypress="return solonumeros(event);"">
                             <input type="hidden" class="form-control" name="u_telephone_1" id="telephone_1" value="<?= $telephone_number ?>">
                         </div>
 

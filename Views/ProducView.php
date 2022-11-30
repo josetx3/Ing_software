@@ -17,7 +17,7 @@ class ProductView
 
                         <div class="form-group col-md-6">
                             <label for="">Referencia:</label>
-                            <input type="text" class="form-control" name="prod_reference" id="prod_reference" required>
+                            <input type="text" class="form-control" name="prod_reference" id="prod_reference" onkeypress="return solonumeros(event)" required>
                         </div>
 
                         <div class="form-group col-md-6">
@@ -32,17 +32,17 @@ class ProductView
 
                         <div class="form-group col-md-6">
                             <label for="">Cantidad:</label>
-                            <input type="number" class="form-control" name="prod_available_quantity" id="prod_available_quantity" placeholder="No se aceptan valores de 0 o menos" required>
+                            <input type="number" class="form-control" name="prod_available_quantity" id="prod_available_quantity" placeholder="No se aceptan valores de 0 o menos" onkeypress="return solonumeros(event)" required>
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="">Precio compra:</label>
-                            <input type="number" class="form-control" name="prod_arrival_price" id="prod_arrival_price">
+                            <input type="number" class="form-control" name="prod_arrival_price" id="prod_arrival_price" onkeypress="return solonumeros(event)">
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="">Precio venta:</label>
-                            <input type="number" class="form-control" name="prod_selling_price" id="prod_selling_price" required>
+                            <input type="number" class="form-control" name="prod_selling_price" id="prod_selling_price" onkeypress="return solonumeros(event)" required>
                         </div>
 
                         <div class="form-group col-md-6">
@@ -159,7 +159,7 @@ class ProductView
 
                     <div class="form-group col-md-6">
                             <label for="">Referencia:</label>
-                            <input type="text" class="form-control" name="u_prod_reference" id="u_prod_reference" value="<?= $prod_reference ?>" readOnly>
+                            <input type="text" class="form-control" name="u_prod_reference" id="u_prod_reference" value="<?= $prod_reference ?>" onkeypress="return solonumeros(event);" readOnly>
                         </div>
 
                         <div class="form-group col-md-6">
@@ -175,17 +175,17 @@ class ProductView
 
                         <div class="form-group col-md-6">
                             <label for="">Cantidad:</label>
-                            <input type="number" class="form-control" name="u_prod_available_quantity" id="u_prod_available_quantity" value="<?= $prod_available_quantity ?>">
+                            <input type="number" class="form-control" name="u_prod_available_quantity" id="u_prod_available_quantity" value="<?= $prod_available_quantity ?>" onkeypress="return solonumeros(event);">
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="">Precio compra:</label>
-                            <input type="number" class="form-control" name="u_prod_arrival_price" id="u_prod_arrival_price" value="<?= $prod_arrival_price ?>">
+                            <input type="number" class="form-control" name="u_prod_arrival_price" id="u_prod_arrival_price" value="<?= $prod_arrival_price ?>" onkeypress="return solonumeros(event);">
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="">Precio venta:</label>
-                            <input type="number" class="form-control" name="u_prod_selling_price" id="u_prod_selling_price" value="<?= $prod_selling_price ?>">
+                            <input type="number" class="form-control" name="u_prod_selling_price" id="u_prod_selling_price" value="<?= $prod_selling_price ?>" onkeypress="return solonumeros(event);">
                         </div>
 
                         <div class="form-group col-md-6">

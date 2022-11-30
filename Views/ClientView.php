@@ -16,7 +16,7 @@ class ClientView
 
                         <div class="form-group col-md-6">
                             <label for="">Documento</label>
-                            <input type="text" class="form-control" name="cliente_documento" id="cliente_documento" required>
+                            <input type="number" class="form-control" name="cliente_documento" id="cliente_documento" onkeypress="return solonumeros(event)"  required>
                         </div>
 
                         <div class="form-group col-md-6">
@@ -41,7 +41,7 @@ class ClientView
 
                         <div class="form-group col-md-6">
                             <label for="">Telefono</label>
-                            <input type="text" class="form-control" name="cliente_telefono" id="cliente_telefono" required>
+                            <input type="number" class="form-control" name="cliente_telefono" id="cliente_telefono" onkeypress="return solonumeros(event)" required>
                         </div>
 
                         <div class="form-group col-md-6">
@@ -61,7 +61,7 @@ class ClientView
 
                         <div class="form-group col-md-6">
                             <label for="">Nit negocio</label>
-                            <input type="text" class="form-control" name="cliente_nit_negocio" id="cliente_nit_negocio" required>
+                            <input type="number" class="form-control" name="cliente_nit_negocio" id="cliente_nit_negocio" onkeypress="return solonumeros(event)" required>
                         </div>
 
                         <div class="form-group col-md-6">
@@ -190,7 +190,8 @@ class ClientView
 
                         <div class="form-group col-md-6">
                             <label for="">Documento</label>
-                            <input type="text" class="form-control" name="cliente_documento" id="cliente_documento" value="<?= $cliente_documento ?>" required>
+                            <input type="number" class="form-control" name="cliente_documento" id="cliente_documento" value="<?= $cliente_documento ?>" onkeypress="return solonumeros(event)" required>
+                            <input type="hidden" class="form-control" name="cliente_documento1" id="cliente_documento1" value="<?= $cliente_documento ?>" required>
                         </div>
 
                         <div class="form-group col-md-6">
@@ -201,6 +202,7 @@ class ClientView
                         <div class="form-group col-md-6">
                             <label for="">Correo</label>
                             <input type="text" class="form-control" name="cliente_correo" id="cliente_correo" value="<?= $cliente_correo ?>" required>
+                            <input type="hidden" class="form-control" name="cliente_correo1" id="cliente_correo1" value="<?= $cliente_correo ?>" required>
                         </div>
 
                         <div class="form-group col-md-6">
@@ -216,6 +218,7 @@ class ClientView
                         <div class="form-group col-md-6">
                             <label for="">Telefono</label>
                             <input type="text" class="form-control" name="cliente_telefono" id="cliente_telefono" value="<?= $cliente_telefono ?>" required>
+                            <input type="hidden" class="form-control" name="cliente_telefono1" id="cliente_telefono1" value="<?= $cliente_telefono ?>" required>
                         </div>
 
                         <div class="form-group col-md-6">
@@ -236,6 +239,7 @@ class ClientView
                         <div class="form-group col-md-6">
                             <label for="">Nit negocio</label>
                             <input type="text" class="form-control" name="cliente_nit_negocio" id="cliente_nit_negocio" value="<?= $cliente_nit_negocio ?>" required>
+                            <input type="hidden" class="form-control" name="cliente_nit_negocio1" id="cliente_nit_negocio1" value="<?= $cliente_nit_negocio ?>" required>
                         </div>
 
                         <div class="form-group col-md-6">

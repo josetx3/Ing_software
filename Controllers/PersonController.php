@@ -216,6 +216,10 @@ class PersonController
             $response = ["message" => 'NO SE PUEDEN INGRESAR MAS DE 30 CARACTERES'];
             exit(json_encode($response));
         }
+        if($document < 0){
+            $response = ["message" => 'NO SE PUEDEN INGRESAR VALORES NEGATIVOS'];
+            exit(json_encode($response));
+        }
 
         if (!(filter_var($email, FILTER_VALIDATE_EMAIL))) {
             $response = ["message" => 'EMAIL INVALIDO '];

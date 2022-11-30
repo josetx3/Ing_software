@@ -43,7 +43,7 @@ class MenuView
   ======================================================== -->
         </head>
 
-        <body>
+        <body oncopy="return false" onpaste="return false">
 
             <!-- ======= Header ======= -->
             <header id="header" class="header fixed-top d-flex align-items-center">
