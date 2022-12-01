@@ -249,8 +249,8 @@ class ClientController
             exit(json_encode($response));
         }
 
-        if (strlen($cliente_documento) > 80) {
-            $response = ["message" => 'NO SE PUEDEN INGRESAR MAS DE 80 CARACTERES EN EL NOMBRE'];
+        if (strlen($cliente_documento) > 20) {
+            $response = ["message" => 'NO SE PUEDEN INGRESAR MAS DE 20 CARACTERES EN EL DOCUMENTO'];
             exit(json_encode($response));
         }
 
